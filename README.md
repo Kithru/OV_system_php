@@ -11,6 +11,6 @@ After registration, the voter is assigned a secret Voter ID with which he/she ca
 
   ```ADMIN LOGIN DETAILS 
   URL: localhost/online_voting/admin 
-  Email : admin@gmail.com 
-  Password : admin 
+  Email : 
+  Password : 
   ```
