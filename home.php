@@ -1,7 +1,7 @@
 <?php 
-include 'includes/session.php'; 
-include 'includes/header.php';
-include 'includes/slugify.php';
+include 'Classes/session.php'; 
+include 'Classes/header.php';
+include 'Classes/slugify.php';
 
 $status = "";
 $slugifyManager = new SlugifyManager();
@@ -68,16 +68,16 @@ $VoterID = $slugifyManager->getVoterId(1);
 											<div class="box-body">
 												<p><?php // echo ($row['max_vote'] > 1) ? 'You may select up to ' . $row['max_vote'] . ' candidates' : 'Select only one candidate'; ?>
 													<span class="pull-right">
-														<button type="button" class="btn btn-success reset" data-desc="<?php echo slugify($row['description']); ?>" style="background-color:#9CD095; color:black; font-size:12px; font-family:Times"><i class="fa fa-refresh"></i> Reset</button>
+														<button type="button" class="btn btn-success reset" data-desc="<?php  ?>" style="background-color:#9CD095; color:black; font-size:12px; font-family:Times"><i class="fa fa-refresh"></i> Reset</button>
 													</span>
 												</p>
 												<div id="candidate_list">
 													<ul>
 														<li>
-															<?php echo $input; ?>
-															<button type="button" class="btn btn-primary btn-sm platform" data-platform="<?php echo $crow['platform']; ?>" data-fullname="<?php echo $crow['firstname'] . ' ' . $crow['lastname']; ?>" style="background-color:#4682B4; color:black; font-size:12px; font-family:Times"><i class="fa fa-search"></i> Platform</button>
+															<?php // echo $input; ?>
+<!--															<button type="button" class="btn btn-primary btn-sm platform" data-platform="<?php echo $crow['platform']; ?>" data-fullname="<?php echo $crow['firstname'] . ' ' . $crow['lastname']; ?>" style="background-color:#4682B4; color:black; font-size:12px; font-family:Times"><i class="fa fa-search"></i> Platform</button>
 															<img src="<?php echo (!empty($crow['photo'])) ? 'images/' . $crow['photo'] : 'images/profile.jpg'; ?>" height="100px" width="100px" class="clist">
-															<span class="cname clist"><?php echo $crow['firstname'] . ' ' . $crow['lastname']; ?></span>
+															<span class="cname clist"><?php echo $crow['firstname'] . ' ' . $crow['lastname']; ?></span>-->
 														</li>
 													</ul>
 												</div>

@@ -6,7 +6,7 @@
   
 
   ```ADMIN LOGIN DETAILS 
-  URL: localhost/......................
+  URL: localhost/online_voting/admin 
   Email : 
   Password : 
   ```
