@@ -10,11 +10,14 @@
 		$query = $conn->query($sql);
 
 		if($query->num_rows < 1){
+                    
 			$_SESSION['error'] = 'Cannot find voter with the ID';
 		}
 		else{
 			$row = $query->fetch_assoc();
-			if(password_verify($password, $row['password'])){
+//			if($password == $row['password'])){
+                        if(password_verify($password, $row['password'])){
+                           
 				$_SESSION['voter'] = $row['id'];
 			}
 			else{
