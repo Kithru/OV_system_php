@@ -1,16 +1,11 @@
 <?php
-	require_once "includes/conn.php";
+	include 'includes/conn.php';
 	session_start();
 
 	if(isset($_SESSION['voter'])){
-		$conn = DBConnect::getConnection();
 		$sql = "SELECT * FROM voters WHERE id = '".$_SESSION['voter']."'";
-		$result = mysql_query($sql,$conn);
-                if ($result) {
-                    $voter = mysql_fetch_assoc($result);
-                } else {
-                    echo "Error: " . mysql_error($conn);
-                }
+		$query = $conn->query($sql);
+		$voter = $query->fetch_assoc();
 	}
 	else{
 		header('location: index.php');
@@ -18,6 +13,3 @@
 	}
 
 ?>
-
-
-
