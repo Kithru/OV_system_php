@@ -9,7 +9,7 @@
 <body class="hold-transition login-page" style="background-color:#F1E9D2" >
 <div class="login-box" style="background-color:#a69f8b ;color:white ; font-size: 22px; font-family:Times">
   	<div class="login-logo" style="background-color: #a69f8b  ;color:white ; font-size: 22px; font-family:Times  ">
-  		<b> Online Voting System</b>
+  		<b>Online Voting System</b>
   	</div>
   
   	<div class="login-box-body"style="background-color:#a69f8b ;color:white ; font-size: 22px; font-family:Times  " >
@@ -31,16 +31,12 @@
       		</div>
     	</form>
   	</div>
-  	<?php
-  		if(isset($_SESSION['error'])){
-  			echo "
-  				<div class='callout callout-danger text-center mt20'>
+  	<?php if(isset($_SESSION['error'])){
+  			echo "<div class='callout callout-danger text-center mt20'>
 			  		<p>".$_SESSION['error']."</p> 
-			  	</div>
-  			";
+			  	</div> ";
   			unset($_SESSION['error']);
-  		}
-  	?>
+          } ?>
 </div>
 	
 <?php include 'includes/scripts.php' ?>
