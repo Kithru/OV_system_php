@@ -24,12 +24,10 @@
 				$_SESSION['error'] = 'Incorrect password';
 			}
 		}
-		
 	}
 	else{
 		$_SESSION['error'] = 'Input voter credentials first';
 	}
-
 	header('location: index.php');
 
 ?>
