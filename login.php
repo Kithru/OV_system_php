@@ -16,8 +16,7 @@
 		else{
 			$row = $query->fetch_assoc();
 //			if($password == $row['password'])){
-                        if(password_verify($password, $row['password'])){
-                           
+                        if(password_verify($password, $row['password'])){                 
 				$_SESSION['voter'] = $row['id'];
 			}
 			else{
