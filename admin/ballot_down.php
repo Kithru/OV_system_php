@@ -26,7 +26,6 @@
 			$sql = "UPDATE positions SET priority = '$priority' WHERE id = '$id'";
 			$conn->query($sql);
 		}
-
 		echo json_encode($output);
 
 	}
