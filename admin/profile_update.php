@@ -20,23 +20,20 @@
 			if(!empty($photo)){
 				move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$photo);
 				$filename = $photo;	
-			}
-			else{
+			}else{
 				$filename = $user['photo'];
 			}
 
 			if($password == $user['password']){
 				$password = $user['password'];
-			}
-			else{
+			}else{
 				$password = password_hash($password, PASSWORD_DEFAULT);
 			}
 
 			$sql = "UPDATE admin SET username = '$username', password = '$password', firstname = '$firstname', lastname = '$lastname', photo = '$filename' WHERE id = '".$user['id']."'";
 			if($conn->query($sql)){
 				$_SESSION['success'] = 'Admin profile updated successfully';
-			}
-			else{
+			}else{
 				$_SESSION['error'] = $conn->error;
 			}
 			
