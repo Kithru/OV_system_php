@@ -37,12 +37,10 @@
 				$_SESSION['error'] = $conn->error;
 			}
 			
-		}
-		else{
+		}else{
 			$_SESSION['error'] = 'Incorrect password';
 		}
-	}
-	else{
+	}else{
 		$_SESSION['error'] = 'Fill up required details first';
 	}
 
